@@ -24,7 +24,7 @@ const OwnerProductDetail = () => {
     const fetchPromotion = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8080/api/promotion",
+          "https://focused-reflection-production.up.railway.app/api/promotion",
           {
             headers: {
               Authorization: `Bearer ${userToken}`,
@@ -51,7 +51,7 @@ const OwnerProductDetail = () => {
 
   const handleDeletePromotion = async (promotionId) => {
     try {
-      await axios.delete("http://localhost:8080/api/promotion", {
+      await axios.delete("https://focused-reflection-production.up.railway.app/api/promotion", {
         headers: {
           Authorization: `Bearer ${userToken}`,
         },

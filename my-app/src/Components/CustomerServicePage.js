@@ -17,7 +17,7 @@ const CustomerServicePage = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await axios.get('http://localhost:8080/api/getProducts', {
+                const response = await axios.get('https://focused-reflection-production.up.railway.app/api/getProducts', {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }

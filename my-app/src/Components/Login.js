@@ -39,7 +39,7 @@ const Login = ({ onLogin }) => {
     
     try {
       // Make the API call to signin and get the JWT token
-      const response = await axios.post('http://localhost:8080/api/auth/signin', {
+      const response = await axios.post('https://focused-reflection-production.up.railway.app/api/auth/signin', {
         username: username,
         password: password,
       });

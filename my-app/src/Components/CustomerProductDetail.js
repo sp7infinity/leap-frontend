@@ -39,7 +39,7 @@ const CustomerProductDetail = () => {
     const fetchProduct = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/api/getProductByProductId?id=${productId}`,
+          `https://focused-reflection-production.up.railway.app/api/getProductByProductId?id=${productId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -55,7 +55,7 @@ const CustomerProductDetail = () => {
     const fetchPromotionId = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/api/getPromotionId?productId=${productId}`,
+          `https://focused-reflection-production.up.railway.app/api/getPromotionId?productId=${productId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -66,7 +66,7 @@ const CustomerProductDetail = () => {
         
         // Check if the promotion is applicable for the customer
         const checkPromotionResponse = await axios.get(
-          `http://localhost:8080/api/promotion/checkIfPromotionApplicableForCustomer?promotion_id=${promotionId}&customer_id=${customerId}`,
+          `https://focused-reflection-production.up.railway.app/api/promotion/checkIfPromotionApplicableForCustomer?promotion_id=${promotionId}&customer_id=${customerId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -98,7 +98,7 @@ const CustomerProductDetail = () => {
   const handleInterestedClick = async () => {
     try {
       const response = await axios.put(
-        `http://localhost:8080/api/promotion/interested?promotion_id=${promotionId}&customer_id=${customerId}`,
+        `https://focused-reflection-production.up.railway.app/api/promotion/interested?promotion_id=${promotionId}&customer_id=${customerId}`,
         {},
         {
           headers: {
@@ -116,7 +116,7 @@ const CustomerProductDetail = () => {
     try {
       if (promotionId) {
         const response = await axios.put(
-          `http://localhost:8080/api/promotion/buy?promotion_id=${promotionId}&customer_id=${customerId}`,
+          `https://focused-reflection-production.up.railway.app/api/promotion/buy?promotion_id=${promotionId}&customer_id=${customerId}`,
           {},
           {
             headers: {
@@ -127,7 +127,7 @@ const CustomerProductDetail = () => {
         console.log('Promotion bought:', response.data);
       } else {
         const response = await axios.post(
-          `http://localhost:8080/api/buyProduct/${productId}`,
+          `https://focused-reflection-production.up.railway.app/api/buyProduct/${productId}`,
           {},
           {
             headers: {

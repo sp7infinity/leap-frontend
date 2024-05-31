@@ -20,7 +20,7 @@ const PromotionTable = () => {
         const fetchPromotions = async () => {
             console.log("this is the role " + role)
             try {
-                const response = await axios.get(`http://localhost:8080/api/promotion/ownerPromotions/${managerId}`, {
+                const response = await axios.get(`https://focused-reflection-production.up.railway.app/api/promotion/ownerPromotions/${managerId}`, {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
@@ -36,7 +36,7 @@ const PromotionTable = () => {
 
     const approvePromotion = async (promotionId) => {
         try {
-            await axios.put(`http://localhost:8080/api/promotion/approve/${promotionId}`, {}, {
+            await axios.put(`https://focused-reflection-production.up.railway.app/api/promotion/approve/${promotionId}`, {}, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }

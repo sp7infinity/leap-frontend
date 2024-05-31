@@ -22,7 +22,7 @@ const AddProductOrService = () => {
                 imageUrl
             };
             try {
-                const response = await axios.post(`http://localhost:8080/api/addProduct?managerId=${managerId}`, 
+                const response = await axios.post(`https://focused-reflection-production.up.railway.app/api/addProduct?managerId=${managerId}`, 
                 data,
                 {
                     headers: {

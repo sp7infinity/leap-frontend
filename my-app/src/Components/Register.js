@@ -38,7 +38,7 @@ const Register = ({ onRegister }) => {
         "organization":organization
     }
     console.log(formData)
-      const response = await axios.post('http://localhost:8080/api/auth/signup',formData
+      const response = await axios.post('https://focused-reflection-production.up.railway.app/api/auth/signup',formData
       );
 
       // Handle the response as needed

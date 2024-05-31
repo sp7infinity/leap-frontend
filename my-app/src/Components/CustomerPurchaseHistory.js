@@ -18,12 +18,12 @@ const CustomerPurchaseHistory = () => {
         const fetchProducts = async () => {
             try {
                 const [productsResponse, promotionsResponse] = await Promise.all([
-                    axios.get('http://localhost:8080/api/myPurchasedProducts', {
+                    axios.get('https://focused-reflection-production.up.railway.app/api/myPurchasedProducts', {
                         headers: {
                             Authorization: `Bearer ${token}`
                         }
                     }),
-                    axios.get(`http://localhost:8080/api/promotion/bought/${customerId}`, {
+                    axios.get(`https://focused-reflection-production.up.railway.app/api/promotion/bought/${customerId}`, {
                         headers: {
                             Authorization: `Bearer ${token}`
                         }

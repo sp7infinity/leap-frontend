@@ -27,7 +27,7 @@ const OwnerHomePage = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/api/products", {
+        const response = await axios.get("https://focused-reflection-production.up.railway.app/api/products", {
           headers: {
             Authorization: `Bearer ${userToken}`,
           },

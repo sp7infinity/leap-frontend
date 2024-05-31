@@ -17,7 +17,7 @@ const CustomerWishlist = () => {
     useEffect(() => {
         const fetchWishlist = async () => {
             try {
-                const response = await axios.get(`http://localhost:8080/api/promotion/interested/${customerId}`, {
+                const response = await axios.get(`https://focused-reflection-production.up.railway.app/api/promotion/interested/${customerId}`, {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }

@@ -22,7 +22,7 @@ const EditPromotion = () => {
   useEffect(() => {
     const fetchPromotion = async () => {
         try {
-            const response = await axios.get(`http://localhost:8080/api/promotion/${promotionId}`, {
+            const response = await axios.get(`https://focused-reflection-production.up.railway.app/api/promotion/${promotionId}`, {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -62,7 +62,7 @@ const EditPromotion = () => {
     };
 
     try {
-      await axios.put(`http://localhost:8080/api/promotion/${promotionId}`, promotionData, {
+      await axios.put(`https://focused-reflection-production.up.railway.app/api/promotion/${promotionId}`, promotionData, {
         headers: {
           Authorization: `Bearer ${token}`
         }

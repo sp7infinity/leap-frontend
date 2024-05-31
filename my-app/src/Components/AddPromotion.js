@@ -31,7 +31,7 @@ const AddPromotion = () => {
     };
 
     try {
-      const response = await axios.post('http://localhost:8080/api/promotion', promotionData, {
+      const response = await axios.post('https://focused-reflection-production.up.railway.app/api/promotion', promotionData, {
         headers: {
           Authorization: `Bearer ${token}`
         }
